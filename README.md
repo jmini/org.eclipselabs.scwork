@@ -7,6 +7,10 @@ Personal work and experiments related to the [Eclipse Scout](https://www.eclipse
 Description
 -----------
 
+### org.eclipselabs.scwork.template
+
+Eclipse Scout templates: Xtend standalone implementation of the "New Scout Project..." feature of the Scout SDK. [Read more](org.eclipselabs.scwork.template/README.md)
+
 
 Get in touch / bug tracker
 --------------------------
