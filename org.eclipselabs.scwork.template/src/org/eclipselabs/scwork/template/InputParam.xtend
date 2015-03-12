@@ -20,4 +20,8 @@ import org.eclipse.xtend.lib.annotations.Accessors
 	ProjectType projectType = ProjectType.SINGLE_FORM_APPLICATION
 	
 	String authorName
+	String copyrightHeader = '''
+/**
+ * 
+ */'''
 }

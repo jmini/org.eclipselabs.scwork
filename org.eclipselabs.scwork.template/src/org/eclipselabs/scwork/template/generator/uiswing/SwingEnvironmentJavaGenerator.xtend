@@ -17,6 +17,7 @@ class SwingEnvironmentJavaGenerator implements ITextFileGenerator {
 	
 	override provideContent(InputParam param) 
 '''
+«param.copyrightHeader»
 package «param.uiswingProjectName»;
 
 import org.eclipse.scout.rt.ui.swing.DefaultSwingEnvironment;

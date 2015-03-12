@@ -17,6 +17,7 @@ class ServerApplicationJavaGenerator implements ITextFileGenerator {
 	
 	override provideContent(InputParam param) 
 '''
+«param.copyrightHeader»
 package «param.serverProjectName»;
 
 import org.eclipse.equinox.app.IApplication;

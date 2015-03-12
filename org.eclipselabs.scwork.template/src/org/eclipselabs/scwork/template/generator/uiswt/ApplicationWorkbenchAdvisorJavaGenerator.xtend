@@ -17,6 +17,7 @@ class ApplicationWorkbenchAdvisorJavaGenerator implements ITextFileGenerator {
 	
 	override provideContent(InputParam param) 
 '''
+«param.copyrightHeader»
 package «param.uiswtProjectName».application;
 
 import org.eclipse.ui.application.IWorkbenchConfigurer;

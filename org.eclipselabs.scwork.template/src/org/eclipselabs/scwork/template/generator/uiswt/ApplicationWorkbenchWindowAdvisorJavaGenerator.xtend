@@ -17,6 +17,7 @@ class ApplicationWorkbenchWindowAdvisorJavaGenerator implements ITextFileGenerat
 	
 	override provideContent(InputParam param) 
 '''
+«param.copyrightHeader»
 package «param.uiswtProjectName».application;
 
 import org.eclipse.scout.rt.ui.swt.basic.application.ApplicationActionBarAdvisor;

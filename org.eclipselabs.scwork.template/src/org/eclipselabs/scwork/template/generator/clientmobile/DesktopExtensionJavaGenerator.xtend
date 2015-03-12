@@ -18,9 +18,7 @@ class DesktopExtensionJavaGenerator implements ITextFileGenerator {
 	
 	override provideContent(InputParam param) 
 '''
-/**
- * 
- */
+«param.copyrightHeader»
 package «param.clientmobileProjectName».ui.desktop;
 
 import org.eclipse.scout.commons.exception.ProcessingException;
@@ -31,7 +29,7 @@ import org.eclipse.scout.rt.shared.ui.UserAgentUtility;
 import «param.clientmobileProjectName».ui.forms.MobileHomeForm;
 
 /**
-* «param.authorName.box("@author ", "")»
+ * «param.authorName.box("@author ", "")»
  */
 public class DesktopExtension extends AbstractDesktopExtension {
 

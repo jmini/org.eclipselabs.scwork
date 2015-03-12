@@ -18,15 +18,13 @@ class IStandardOutlineServiceJavaGenerator implements ITextFileGenerator {
 	
 	override provideContent(InputParam param) 
 '''
-/**
- * 
- */
+«param.copyrightHeader»
 package «param.sharedProjectName».services;
 
 import org.eclipse.scout.service.IService;
 
 /**
-* «param.authorName.box("@author ", "")»
+ * «param.authorName.box("@author ", "")»
  */
 public interface IStandardOutlineService extends IService {
 }

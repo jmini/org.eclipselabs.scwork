@@ -17,6 +17,7 @@ class AccessControlServiceJavaGenerator implements ITextFileGenerator {
 	
 	override provideContent(InputParam param) 
 '''
+«param.copyrightHeader»
 package «param.serverProjectName».services.common.security;
 
 import java.security.AllPermission;

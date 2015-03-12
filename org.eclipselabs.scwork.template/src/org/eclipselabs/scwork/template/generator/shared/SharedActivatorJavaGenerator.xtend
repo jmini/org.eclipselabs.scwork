@@ -17,6 +17,7 @@ class SharedActivatorJavaGenerator implements ITextFileGenerator {
 	
 	override provideContent(InputParam param) 
 '''
+«param.copyrightHeader»
 package «param.sharedProjectName»;
 
 import org.osgi.framework.BundleActivator;

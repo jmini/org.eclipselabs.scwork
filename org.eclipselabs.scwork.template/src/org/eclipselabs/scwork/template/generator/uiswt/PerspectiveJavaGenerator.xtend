@@ -17,6 +17,7 @@ class PerspectiveJavaGenerator implements ITextFileGenerator {
 	
 	override provideContent(InputParam param) 
 '''
+«param.copyrightHeader»
 package «param.uiswtProjectName».perspective;
 
 import org.eclipse.ui.IPageLayout;

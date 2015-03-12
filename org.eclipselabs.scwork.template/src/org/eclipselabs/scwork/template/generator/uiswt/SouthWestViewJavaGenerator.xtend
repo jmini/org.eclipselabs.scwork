@@ -17,6 +17,7 @@ class SouthWestViewJavaGenerator implements ITextFileGenerator {
 	
 	override provideContent(InputParam param) 
 '''
+«param.copyrightHeader»
 package «param.uiswtProjectName».views;
 
 import org.eclipse.scout.rt.ui.swt.ISwtEnvironment;

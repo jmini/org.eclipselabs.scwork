@@ -9,7 +9,7 @@ Description
 
 ### org.eclipselabs.scwork.template
 
-Eclipse Scout templates: Xtend standalone implementation of the "New Scout Project..." feature of the Scout SDK. [Read more](org.eclipselabs.scwork.template/README.md)
+Eclipse Scout templates: Xtend standalone implementation of the "New Scout Project..." feature of the Scout SDK. [Read more](org.eclipselabs.scwork.template/)
 
 
 Get in touch / bug tracker

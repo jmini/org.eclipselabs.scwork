@@ -18,16 +18,14 @@ class StandardOutlineJavaGenerator implements ITextFileGenerator {
 	
 	override provideContent(InputParam param) 
 '''
-/**
- * 
- */
+«param.copyrightHeader»
 package «param.clientProjectName».ui.desktop.outlines;
 
 import org.eclipse.scout.rt.extension.client.ui.desktop.outline.AbstractExtensibleOutline;
 import org.eclipse.scout.rt.shared.TEXTS;
 
 /**
-* «param.authorName.box("@author ", "")»
+ * «param.authorName.box("@author ", "")»
  */
 public class StandardOutline extends AbstractExtensibleOutline {
 

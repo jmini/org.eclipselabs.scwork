@@ -18,9 +18,7 @@ class DesktopFormDataJavaGenerator implements ITextFileGenerator {
 	
 	override provideContent(InputParam param) 
 '''
-/**
- * 
- */
+«param.copyrightHeader»
 package «param.sharedProjectName».services;
 
 import javax.annotation.Generated;

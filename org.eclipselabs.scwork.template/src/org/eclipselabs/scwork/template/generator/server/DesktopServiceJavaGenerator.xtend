@@ -18,9 +18,7 @@ class DesktopServiceJavaGenerator implements ITextFileGenerator {
 	
 	override provideContent(InputParam param) 
 '''
-/**
- * 
- */
+«param.copyrightHeader»
 package «param.serverProjectName».services;
 
 import org.eclipse.scout.commons.exception.ProcessingException;
@@ -30,7 +28,7 @@ import «param.sharedProjectName».services.DesktopFormData;
 import «param.sharedProjectName».services.IDesktopService;
 
 /**
-* «param.authorName.box("@author ", "")»
+ * «param.authorName.box("@author ", "")»
  */
 public class DesktopService extends AbstractService implements IDesktopService {
 

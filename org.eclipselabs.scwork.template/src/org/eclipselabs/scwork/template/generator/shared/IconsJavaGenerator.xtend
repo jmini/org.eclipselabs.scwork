@@ -17,6 +17,7 @@ class IconsJavaGenerator implements ITextFileGenerator {
 	
 	override provideContent(InputParam param) 
 '''
+«param.copyrightHeader»
 package «param.sharedProjectName»;
 
 import org.eclipse.scout.rt.shared.AbstractIcons;

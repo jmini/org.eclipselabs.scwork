@@ -17,6 +17,7 @@ class ScoutEditorPartJavaGenerator implements ITextFileGenerator {
 	
 	override provideContent(InputParam param) 
 '''
+«param.copyrightHeader»
 package «param.uiswtProjectName».editor;
 
 import org.eclipse.scout.rt.ui.swt.ISwtEnvironment;

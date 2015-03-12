@@ -18,9 +18,7 @@ class MobileHomeFormJavaGenerator implements ITextFileGenerator {
 	
 	override provideContent(InputParam param) 
 '''
-/**
- * 
- */
+«param.copyrightHeader»
 package «param.clientmobileProjectName».ui.forms;
 
 import java.util.List;
@@ -51,7 +49,7 @@ import «param.clientmobileProjectName».ui.forms.MobileHomeForm.MainBox.Outline
 import «param.clientmobileProjectName».ui.forms.MobileHomeForm.MainBox.OutlinesTableField.Table;
 
 /**
-* «param.authorName.box("@author ", "")»
+ * «param.authorName.box("@author ", "")»
  */
 public class MobileHomeForm extends AbstractMobileForm implements IOutlineChooserForm {
 

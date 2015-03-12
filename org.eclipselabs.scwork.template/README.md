@@ -50,6 +50,19 @@ public class Main {
     //Additional configuration:
     param.setAuthorName("jbr");
 
+    StringBuilder sb = new StringBuilder();
+    sb.append("/*******************************************************************************\n");
+    sb.append(" * Copyright (c) 2015 Jeremie Bresson.\n");
+    sb.append(" * All rights reserved. This program and the accompanying materials\n");
+    sb.append(" * are made available under the terms of the Eclipse Public License v1.0\n");
+    sb.append(" * which accompanies this distribution, and is available at\n");
+    sb.append(" * http://www.eclipse.org/legal/epl-v10.html\n");
+    sb.append(" *\n");
+    sb.append(" * Contributors:\n");
+    sb.append(" *     Jeremie Bresson - initial API and implementation\n");
+    sb.append(" *******************************************************************************/\n");
+    param.setCopyrightHeader(sb.toString());
+
     //Do the generation:
     List<IFileGenerator> generators = TemplateUtility.getAllGenerators();
     TemplateUtility.generateAll(generators, param);

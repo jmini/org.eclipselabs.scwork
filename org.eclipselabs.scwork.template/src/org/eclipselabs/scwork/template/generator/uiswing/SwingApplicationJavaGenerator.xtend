@@ -17,6 +17,7 @@ class SwingApplicationJavaGenerator implements ITextFileGenerator {
 	
 	override provideContent(InputParam param) 
 '''
+«param.copyrightHeader»
 package «param.uiswingProjectName»;
 
 import java.security.PrivilegedExceptionAction;

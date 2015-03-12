@@ -17,6 +17,7 @@ class StandaloneRwtEnvironmentJavaGenerator implements ITextFileGenerator {
 	
 	override provideContent(InputParam param) 
 '''
+«param.copyrightHeader»
 package «param.uirapProjectName»;
 
 import org.eclipse.scout.rt.ui.rap.AbstractStandaloneRwtEnvironment;

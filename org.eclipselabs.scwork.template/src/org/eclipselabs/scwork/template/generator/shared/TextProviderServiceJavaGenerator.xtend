@@ -17,6 +17,7 @@ class TextProviderServiceJavaGenerator implements ITextFileGenerator {
 	
 	override provideContent(InputParam param) 
 '''
+«param.copyrightHeader»
 package «param.sharedProjectName».services.common.text;
 
 import org.eclipse.scout.rt.shared.services.common.text.AbstractDynamicNlsTextProviderService;

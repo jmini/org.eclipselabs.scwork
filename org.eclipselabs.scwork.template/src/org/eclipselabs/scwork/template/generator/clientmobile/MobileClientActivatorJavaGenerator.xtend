@@ -17,6 +17,7 @@ class MobileClientActivatorJavaGenerator implements ITextFileGenerator {
 	
 	override provideContent(InputParam param) 
 '''
+«param.copyrightHeader»
 package «param.clientmobileProjectName»;
 
 import org.osgi.framework.BundleActivator;

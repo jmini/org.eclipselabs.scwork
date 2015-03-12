@@ -17,6 +17,7 @@ class DesktopMenuBarJavaGenerator implements ITextFileGenerator {
 	
 	override provideContent(InputParam param) 
 '''
+«param.copyrightHeader»
 package «param.uiswtProjectName».application.menu;
 
 import java.util.ArrayList;

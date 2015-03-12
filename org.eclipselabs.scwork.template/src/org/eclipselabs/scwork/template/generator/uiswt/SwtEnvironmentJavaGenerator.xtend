@@ -17,6 +17,7 @@ class SwtEnvironmentJavaGenerator implements ITextFileGenerator {
 	
 	override provideContent(InputParam param) 
 '''
+«param.copyrightHeader»
 package «param.uiswtProjectName»;
 
 import org.eclipse.scout.rt.client.AbstractClientSession;

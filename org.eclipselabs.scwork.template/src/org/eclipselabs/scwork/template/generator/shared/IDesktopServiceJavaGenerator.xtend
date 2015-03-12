@@ -18,9 +18,7 @@ class IDesktopServiceJavaGenerator implements ITextFileGenerator {
 	
 	override provideContent(InputParam param) 
 '''
-/**
- * 
- */
+«param.copyrightHeader»
 package «param.sharedProjectName».services;
 
 import org.eclipse.scout.commons.exception.ProcessingException;
@@ -29,7 +27,7 @@ import org.eclipse.scout.rt.shared.validate.InputValidation;
 import org.eclipse.scout.service.IService;
 
 /**
-* «param.authorName.box("@author ", "")»
+ * «param.authorName.box("@author ", "")»
  */
 @InputValidation(IValidationStrategy.PROCESS.class)
 public interface IDesktopService extends IService {

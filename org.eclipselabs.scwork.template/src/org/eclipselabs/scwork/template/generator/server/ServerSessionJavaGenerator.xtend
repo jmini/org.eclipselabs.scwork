@@ -17,6 +17,7 @@ class ServerSessionJavaGenerator implements ITextFileGenerator {
 	
 	override provideContent(InputParam param) 
 '''
+«param.copyrightHeader»
 package «param.serverProjectName»;
 
 import org.eclipse.scout.commons.exception.ProcessingException;

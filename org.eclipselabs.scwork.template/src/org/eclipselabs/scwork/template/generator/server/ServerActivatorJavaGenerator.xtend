@@ -17,6 +17,7 @@ class ServerActivatorJavaGenerator implements ITextFileGenerator {
 	
 	override provideContent(InputParam param) 
 '''
+«param.copyrightHeader»
 package «param.serverProjectName»;
 
 import javax.security.auth.Subject;

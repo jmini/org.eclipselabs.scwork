@@ -17,6 +17,7 @@ class ClientSessionJavaGenerator implements ITextFileGenerator {
 	
 	override provideContent(InputParam param) 
 '''
+«param.copyrightHeader»
 package «param.clientProjectName»;
 
 import org.eclipse.scout.commons.UriUtility;
