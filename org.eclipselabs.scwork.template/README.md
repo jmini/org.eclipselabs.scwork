@@ -49,7 +49,6 @@ public class Main {
 
     //Additional configuration:
     param.setAuthorName("jbr");
-
     StringBuilder sb = new StringBuilder();
     sb.append("/*******************************************************************************\n");
     sb.append(" * Copyright (c) 2015 Jeremie Bresson.\n");
@@ -62,6 +61,7 @@ public class Main {
     sb.append(" *     Jeremie Bresson - initial API and implementation\n");
     sb.append(" *******************************************************************************/\n");
     param.setCopyrightHeader(sb.toString());
+    param.setProjectVersion("2.0.0.qualifier");
 
     //Do the generation:
     List<IFileGenerator> generators = TemplateUtility.getAllGenerators();

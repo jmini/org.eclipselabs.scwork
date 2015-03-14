@@ -19,9 +19,9 @@ class MobileClientManifestMfGenerator implements ITextFileGenerator {
 '''
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: Client Mobile
+Bundle-Name: «param.clientmobileProjectName»
 Bundle-SymbolicName: «param.clientmobileProjectName»;singleton:=true
-Bundle-Version: 1.0.0.qualifier
+Bundle-Version: «param.projectVersion»
 Bundle-Activator: «param.clientmobileProjectName».Activator
 Bundle-Vendor: Eclipse Scout Project
 Require-Bundle: org.eclipse.core.runtime,

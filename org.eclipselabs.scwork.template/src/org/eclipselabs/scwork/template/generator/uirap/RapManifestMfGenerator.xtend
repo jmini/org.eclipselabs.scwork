@@ -19,9 +19,9 @@ class RapManifestMfGenerator implements ITextFileGenerator {
 '''
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: RAP Bundle
+Bundle-Name: «param.uirapProjectName»
 Bundle-SymbolicName: «param.uirapProjectName»;singleton:=true
-Bundle-Version: 1.0.0.qualifier
+Bundle-Version: «param.projectVersion»
 Bundle-Activator: «param.uirapProjectName».Activator
 Bundle-Vendor: Eclipse Scout Project
 Export-Package: «param.uirapProjectName»

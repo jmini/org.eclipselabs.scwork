@@ -19,9 +19,9 @@ class SwtManifestMfGenerator implements ITextFileGenerator {
 '''
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: My Application
+Bundle-Name: «param.uiswtProjectName»
 Bundle-SymbolicName: «param.uiswtProjectName»;singleton:=true
-Bundle-Version: 1.0.0.qualifier
+Bundle-Version: «param.projectVersion»
 Bundle-ClassPath: .
 Bundle-Activator: «param.uiswtProjectName».Activator
 Export-Package: «param.uiswtProjectName»;uses:="org.eclipse.scout.rt.ui.swt,org.eclipse.scout.rt.client.session,org.osgi.framework",

@@ -18,7 +18,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: «param.provideProjectName»
 Bundle-SymbolicName: «param.provideProjectName»;singleton:=true
-Bundle-Version: 1.0.0.qualifier
+Bundle-Version: «param.projectVersion»
 «param.provideBundleClassPath.box("Bundle-ClassPath: ", "")»
 Bundle-Activator: «param.provideProjectName».Activator
 Export-Package: «param.provideExportPackage.join(",\n ")»
