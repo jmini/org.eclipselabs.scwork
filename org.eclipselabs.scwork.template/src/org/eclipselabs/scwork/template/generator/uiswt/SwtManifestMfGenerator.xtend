@@ -1,11 +1,11 @@
 package org.eclipselabs.scwork.template.generator.uiswt
 
 import org.eclipselabs.scwork.template.InputParam
-import org.eclipselabs.scwork.template.generator.ITextFileGenerator
+import org.eclipselabs.scwork.template.generator.common.AbstractManifestMfGenerator
 
 import static extension org.eclipselabs.scwork.template.generator.common.GeneratorExtensions.*
 
-class SwtManifestMfGenerator implements ITextFileGenerator {
+class SwtManifestMfGenerator extends AbstractManifestMfGenerator {
 	
 	override shouldGenerate(InputParam param) {
 		param.uiswtIncluded
@@ -14,31 +14,38 @@ class SwtManifestMfGenerator implements ITextFileGenerator {
 	override provideFile(InputParam param) {
 		param.uiswtFile(#["META-INF", "MANIFEST.MF"])
 	}
+
+	override provideProjectName(InputParam param) {
+		param.uiswtProjectName
+	}
 	
-	override provideContent(InputParam param) 
-'''
-Manifest-Version: 1.0
-Bundle-ManifestVersion: 2
-Bundle-Name: «param.uiswtProjectName»
-Bundle-SymbolicName: «param.uiswtProjectName»;singleton:=true
-Bundle-Version: «param.projectVersion»
-Bundle-ClassPath: .
-Bundle-Activator: «param.uiswtProjectName».Activator
-Export-Package: «param.uiswtProjectName»;uses:="org.eclipse.scout.rt.ui.swt,org.eclipse.scout.rt.client.session,org.osgi.framework",
- «param.uiswtProjectName».application,
- «param.uiswtProjectName».application.menu,
- «param.uiswtProjectName».editor,
- «param.uiswtProjectName».perspective,
- «param.uiswtProjectName».views
-Require-Bundle: «param.clientProjectName»;visibility:=reexport,
- «param.sharedProjectName»,
- org.eclipse.scout.rt.ui.swt,
- org.eclipse.scout.net,
- org.eclipse.equinox.app,
- org.eclipse.core.runtime,
- org.eclipse.ui,
- org.eclipse.ui.views
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Bundle-ActivationPolicy: lazy
-'''
+	override provideBundleClassPath(InputParam param) {
+	}
+	
+	override provideExportPackage(InputParam param) {
+		#[
+			param.uiswtProjectName + ';uses:="org.eclipse.scout.rt.ui.swt,org.eclipse.scout.rt.client.session,org.osgi.framework"',
+			param.uiswtProjectName + '.application',
+			param.uiswtProjectName + '.application.menu',
+			param.uiswtProjectName + '.editor',
+			param.uiswtProjectName + '.perspective',
+			param.uiswtProjectName + '.views'
+		]
+	}
+	
+	override provideRequireBundle(InputParam param) {
+		#[
+			param.clientProjectName +";visibility:=reexport",
+			param.sharedProjectName,
+			"org.eclipse.scout.rt.ui.swt",
+			"org.eclipse.scout.net",
+			"org.eclipse.equinox.app",
+			"org.eclipse.core.runtime",
+			"org.eclipse.ui",
+			"org.eclipse.ui.views"
+		]
+	}
+	
+	override provideImportPackage(InputParam param) {
+	}
 }

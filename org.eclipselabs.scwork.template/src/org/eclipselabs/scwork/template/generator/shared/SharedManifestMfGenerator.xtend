@@ -58,7 +58,5 @@ class SharedManifestMfGenerator extends AbstractManifestMfGenerator {
 	}
 	
 	override provideImportPackage(InputParam param) {
-		#[]
 	}
-
 }

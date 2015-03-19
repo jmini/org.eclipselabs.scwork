@@ -61,8 +61,6 @@ class ClientManifestMfGenerator extends AbstractManifestMfGenerator {
 	}
 	
 	override provideImportPackage(InputParam param) {
-		#[
-			'org.w3c.dom.svg;version="[1.1.0,2.0.0)"'
-		]
+		#['org.w3c.dom.svg;version="[1.1.0,2.0.0)"']
 	}
 }

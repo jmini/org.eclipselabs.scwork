@@ -69,5 +69,4 @@ class ServerManifestMfGenerator extends AbstractManifestMfGenerator {
 			'javax.servlet.http;version="2.4.0"'
 		]
 	}
-
 }
