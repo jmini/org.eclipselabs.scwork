@@ -25,4 +25,5 @@ import org.eclipse.xtend.lib.annotations.Accessors
  * 
  */'''
 	String projectVersion = "1.0.0.qualifier"
+	String javaVersion = "JavaSE-1.8"
 }

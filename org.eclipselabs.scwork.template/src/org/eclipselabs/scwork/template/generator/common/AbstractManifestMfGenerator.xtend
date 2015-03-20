@@ -23,7 +23,7 @@ Bundle-Version: «param.projectVersion»
 Bundle-Activator: «param.provideProjectName».Activator
 Export-Package: «param.provideExportPackage.join(",\n ")»
 Require-Bundle: «param.provideRequireBundle.join(",\n ")»
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-RequiredExecutionEnvironment: «param.javaVersion»
 «param.provideImportPackage.join("Import-Package: ", ",\n ", "", [it])»
 Bundle-ActivationPolicy: lazy
 '''
