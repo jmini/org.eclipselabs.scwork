@@ -21,10 +21,10 @@ Bundle-SymbolicName: «param.provideProjectName»;singleton:=true
 Bundle-Version: «param.projectVersion»
 «param.provideBundleClassPath.box("Bundle-ClassPath: ", "")»
 Bundle-Activator: «param.provideProjectName».Activator
-Export-Package: «param.provideExportPackage.join(",\n ")»
-Require-Bundle: «param.provideRequireBundle.join(",\n ")»
+Export-Package: «param.provideExportPackage?.join(",\n ")»
+Require-Bundle: «param.provideRequireBundle?.join(",\n ")»
 Bundle-RequiredExecutionEnvironment: «param.javaVersion»
-«param.provideImportPackage.join("Import-Package: ", ",\n ", "", [it])»
+«param.provideImportPackage?.join("Import-Package: ", ",\n ", "", [it])»
 Bundle-ActivationPolicy: lazy
 '''
 	

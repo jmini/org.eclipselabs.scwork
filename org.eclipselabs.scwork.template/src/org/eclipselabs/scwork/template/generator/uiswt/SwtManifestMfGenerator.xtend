@@ -20,6 +20,7 @@ class SwtManifestMfGenerator extends AbstractManifestMfGenerator {
 	}
 	
 	override provideBundleClassPath(InputParam param) {
+		"."
 	}
 	
 	override provideExportPackage(InputParam param) {
