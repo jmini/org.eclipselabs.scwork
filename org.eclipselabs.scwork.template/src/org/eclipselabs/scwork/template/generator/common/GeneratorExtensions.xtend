@@ -178,7 +178,14 @@ class GeneratorExtensions {
 	}
 	
 	def static targetFile(InputParam param, String fileName) {
-		computeFilePath(param.workspaceFolder, #[param.targetProjectName, fileName])
+		targetFile(param, #[fileName])
+	}
+	
+	def static targetFile(InputParam param, List<String> names) {
+		val l = new ArrayList<String>
+		l.add(param.targetProjectName)
+		l.addAll(names)
+		computeFilePath(param.workspaceFolder, l)
 	}
 
 	private def static computeFilePath(File root, List<String> parts) {
@@ -197,5 +204,13 @@ class GeneratorExtensions {
 			}
 		}
 		sb.toString
+	}
+	
+	def static <T> List<T> notNull(List<T> list) {
+		if(list == null) {
+			#[]
+		} else {
+			list
+		}
 	}
 }

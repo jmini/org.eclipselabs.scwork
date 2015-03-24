@@ -1,32 +1,27 @@
 package org.eclipselabs.scwork.template.generator.target
 
 import org.eclipselabs.scwork.template.InputParam
-import org.eclipselabs.scwork.template.generator.ITextFileGenerator
+import org.eclipselabs.scwork.template.generator.common.AbstractDotProjectGenerator
 
 import static extension org.eclipselabs.scwork.template.generator.common.GeneratorExtensions.*
 
-class TargetDotProjectGenerator implements ITextFileGenerator {
+class TargetDotProjectGenerator extends AbstractDotProjectGenerator {
 	
 	override shouldGenerate(InputParam param) {
 		true
 	}
 	
 	override provideFile(InputParam param) {
-		param.targetFile(".project")
+		param.targetFile(subFilePath)
 	}
 	
-	override provideContent(InputParam param) 
-'''
-<?xml version="1.0" encoding="UTF-8"?>
-<projectDescription>
-	<name>«param.targetProjectName»</name>
-	<comment></comment>
-	<projects>
-	</projects>
-	<buildSpec>
-	</buildSpec>
-	<natures>
-	</natures>
-</projectDescription>
-'''
+	override provideProjectName(InputParam param) {
+		param.targetProjectName
+	}
+
+	override provideBuildCommandName(InputParam param) {
+	}
+	
+	override provideNatures(InputParam param) {
+	}
 }

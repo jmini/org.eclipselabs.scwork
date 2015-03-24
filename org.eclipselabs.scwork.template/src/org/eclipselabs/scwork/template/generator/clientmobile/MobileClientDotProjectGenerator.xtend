@@ -1,49 +1,21 @@
 package org.eclipselabs.scwork.template.generator.clientmobile
 
 import org.eclipselabs.scwork.template.InputParam
-import org.eclipselabs.scwork.template.generator.ITextFileGenerator
+import org.eclipselabs.scwork.template.generator.common.AbstractJavaDotProjectGenerator
 
 import static extension org.eclipselabs.scwork.template.generator.common.GeneratorExtensions.*
 
-class MobileClientDotProjectGenerator implements ITextFileGenerator {
+class MobileClientDotProjectGenerator extends AbstractJavaDotProjectGenerator {
 	
 	override shouldGenerate(InputParam param) {
 		param.uirapIncluded
 	}
 	
 	override provideFile(InputParam param) {
-		param.clientmobileFile(".project")
+		param.clientmobileFile(subFilePath)
 	}
 	
-	override provideContent(InputParam param) 
-'''
-<?xml version="1.0" encoding="UTF-8"?>
-<projectDescription>
-	<name>«param.clientmobileProjectName»</name>
-	<comment></comment>
-	<projects>
-	</projects>
-	<buildSpec>
-		<buildCommand>
-			<name>org.eclipse.jdt.core.javabuilder</name>
-			<arguments>
-			</arguments>
-		</buildCommand>
-		<buildCommand>
-			<name>org.eclipse.pde.ManifestBuilder</name>
-			<arguments>
-			</arguments>
-		</buildCommand>
-		<buildCommand>
-			<name>org.eclipse.pde.SchemaBuilder</name>
-			<arguments>
-			</arguments>
-		</buildCommand>
-	</buildSpec>
-	<natures>
-		<nature>org.eclipse.jdt.core.javanature</nature>
-		<nature>org.eclipse.pde.PluginNature</nature>
-	</natures>
-</projectDescription>
-'''
+	override provideProjectName(InputParam param) {
+		param.clientmobileProjectName
+	}
 }
